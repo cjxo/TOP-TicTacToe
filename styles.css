@@ -1,0 +1,82 @@
+:root {
+    font-family: 'Lucida Sans';
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.game-wrapper {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: peachpuff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: flex;
+}
+
+.sidebar {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sidebar div:nth-child(2) > div {
+    margin-bottom: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.cell {
+    border: 1px solid black;
+    margin-right: -1px;
+    margin-bottom: -1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 64px;
+    background-color: hsl(28, 66%, 64%);
+}
+
+.cell:nth-child(1) {
+    border-top-left-radius: 16px;
+}
+
+.cell:nth-child(3) {
+    border-top-right-radius: 16px;
+
+}
+
+.cell:nth-child(7) {
+    border-bottom-left-radius: 16px;
+}
+
+.cell:nth-child(9) {
+    border-bottom-right-radius: 16px;
+}
+
+.reset-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color:  hsl(28, 66%, 64%);
+    border: 1px solid  hsl(28, 80%, 50%);
+    color: black;
+}
+
+.reset-button:hover {
+    background-color:  hsl(28, 80%, 60%);
+    border: 1px solid hsl(28, 90%, 40%);
+}
